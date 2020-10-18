@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background-size:cover;
+            text-align: center ;
+            vertical-align: middle;
+        }
+
+       p{
+           position:absolute;
+           top: 37%;
+           left: 35%;
+           color:grey;
+
+       }
+
+       #usr{
+        text-shadow: 2px 2px 4px #0000005b;
+        font-size: 40px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+       }
+
+       input{
+
+           color:black;
+           border:none;
+           background-color: rgba(255, 255, 255, 0);
+
+       }
+    </style>
+
+</head>
+
+<body style="background-image:url(/static/images/leafbg.png);overflow:hidden">
+    <div>
+    <p id="usr">
+        FOOTPRINT :
+        <input type="text" class="form-control" id="usr" value = "{{profile.footprint}}"></br></br>&nbsp;
+        POINTS :
+        <input type="text" class="form-control" id="usr" value = "{{profile.points}}">
+    </p>
+    </div>
+    <a href="{% url 'my_view_name' %}">
+            <img src="{% static 'images/home.png' %}" style="position: absolute;left:1300px;bottom:700px; width:80px;height:80px;"/>
+        </a>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+<style>
+body{
+
+    background-size:cover ;
+}
+
+#vehicles{
+     position:relative;
+     top:100px;
+     /*width:800px;
+     height:450px;*/
+     animation-name: vehicle;
+     animation-duration: 7s;
+     animation-iteration-count: infinite;
+ }
+
+@keyframes vehicle {
+  0%   {left:-1000px; bottom:0px;}
+  
+  100% {left:2000px; bottom:0px;}
+    
+}
+
+#message{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 200px -10px 25px ;
+    color:white;
+    background-color: black;
+    padding: 30px 50px;
+    text-decoration: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.575) ;
+    
+}
+
+
+</style>
+</head>
+
+<body style="background-image:url(/static/images/bg.png);overflow:hidden">
+
+        <div id="message">CONGRATULATIONS! YOU CHOSE THE GREENER APPROACH!</div>
+
+        <a href="{% url 'my_out_view_name' %}"><img src="{% static 'images/home.png' %}" style="position: relative; top: -280px;left:1300px; width:80px;height:80px;"/>
+
+    <div id="vehicles">
+        <img src="{% static 'images/cycle.gif' %}" style="width:350px;height:350px;"/>
+    </div>
+
+    
+
+</body>
+
+</html>

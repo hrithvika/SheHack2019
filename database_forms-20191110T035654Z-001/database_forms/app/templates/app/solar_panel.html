@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+
+<!-- CSS -->
+<style type="text/css">
+html,
+body {
+height: 100%;
+}
+.form-group{
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 10px;
+     	 height: 45px;
+		  width: 300px;
+		  box-shadow: 2px 2px 2px 1px;
+		  border:none;
+		}
+
+body {
+background-repeat: no-repeat;
+background-size: cover;
+}
+.form-content{
+			border-radius: 10px;
+			background-color: rgb(56, 81, 241);
+			color : white;
+		  height: 45px;
+		  width: 100px;
+		  font-family: Arial;
+		  font-weight: bold;
+  border: none;
+		}
+</style>
+
+</head>
+<body style="background-image:url(/static/images/solar.png);overflow:hidden">
+
+
+
+<form method="get" enctype="application/x-www-form-urlencoded" action="">
+</br></br>
+  <label><h2>Q. How much kW does your solar panel produce ?</h2>
+<input type="text" name="solar" class="form-group" required>
+</label>
+ <p><button type="button" class="form-content"> SUBMIT </button></p>
+</form>
+</div>
+<a href="{% url 'my_out_view_name' %}"><img src="{% static 'images/home.png' %}" style="position: relative; top: -165px;left: 1350px; width:60px;height:60px;"/></a>a>
+</body>
+</html>

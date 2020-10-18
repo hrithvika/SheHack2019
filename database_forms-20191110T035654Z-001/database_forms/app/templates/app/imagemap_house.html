@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+#content {
+position: relative}
+
+#content a {
+display: block}
+
+#menu1, #menu2 {
+    display: none;
+  position: absolute;
+  background-color: #fd8e8e;
+  font-family: "Arial";
+  color:white;
+ min-height: 250px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.575) ;
+  border-radius:20px;
+  z-index: 1;
+  padding: 10px;
+  top: 250px;
+    left: 460px;
+display: none}
+
+.btn{
+    margin: 5px;
+}
+
+.close {
+  color: rgba(255, 255, 255, 0.733);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0);
+  border:none;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+  }
+
+
+</style>
+    
+<script type="text/javascript">
+    function showMenu(menuId)  {
+    //hide all the menues
+    document.getElementById('menu1').style.display="none";
+    document.getElementById('menu2').style.display="none";
+    //display the menu for this area of the image
+    document.getElementById(menuId).style.display="block";
+    }
+</script>
+
+<body>
+        <div id="content" style="text-align: center" class="container">
+                <img src="{% static 'images/house.png' %}"  alt="House" usemap="#workmap" width="1000" height="750">
+                <map name="workmap" id="workmap">
+                        <area shape=poly coords="648,351, 661,350, 677,345, 828, 345, 855,351, 855,371, 648,371" alt="Cupboard room2" onclick="javascript:showMenu('menu1');">
+                        <area shape=poly coords="499,730, 504,681, 556,681, 565,730" alt="Door" href="{% url 'my_out_view_name' %}">
+                        <area shape="circle" coords="872,418,24" alt="Electricity" href="{% url 'mahadiscomf' %}" >
+                        <area shape=poly coords="48,391, 135,391, 151,406, 151,619, 164,619, 164,671, 123,712, 48,712" alt="Kitchen" onclick="javascript:showMenu('menu2');">
+                        <area shape=poly coords="50,39, 98,39, 172,77, 172,163, 50,156" alt="Cupboard room1" onclick="javascript:showMenu('menu1');">
+                        <area shape=poly coords="97,308,113,311,142,311,142,344,113,344,98,346" alt="Laptop" href="{% url 'statistics' %}">
+                </map>
+                <div id="menu1">
+                    <button type="button" class="close" onclick="document.getElementById('menu1').style.display='none'">&times;</button>
+                </br> </br>
+                    <a href="{% url 'shopping' %}" onclick="window.open('http://www.amazon.com')"><button type="button" class="btn btn-outline-light">AMAZON</button></a>
+                     <a href="{% url 'shopping' %}" onclick="window.open('http://www.myntra.com')"><button type="button" class="btn btn-outline-light">MYNTRA</button></a>
+                     <a href="{% url 'shopping' %}" onclick="window.open('http://www.snapdeal.com')"> <button type="button" class="btn btn-outline-light">SNAPDEAL</button></a>
+                     <a href="{% url 'shopping' %}" onclick="window.open('http://www.flipkart.com')"><button type="button" class="btn btn-outline-light">FLIPKART</button></a>
+                </div>
+                <div id="menu2">
+                    <button type="button" class="close" onclick="document.getElementById('menu2').style.display='none'">&times;</button>
+                    </br></br>
+                     
+                    <a href="{% url 'food' %}"><button type="button" class="btn btn-outline-light">COOK AT HOME</button></br>
+                    <a href="{% url 'food' %}" onclick="window.open('http://www.zomato.com')"><button type="button" class="btn btn-outline-light">ZOMATO</button></a>
+                    <a href="{% url 'food' %}" onclick="window.open('http://www.bigbasket.com')"> <button type="button" class="btn btn-outline-light">BIG BASKET</button></a>
+                    <a href="{% url 'food' %}" onclick="window.open('http://www.swiggy.com')"> <button type="button" class="btn btn-outline-light">SWIGGY</button></a>
+            
+             
+             </div>
+
+    
+    
+</div>
+
+            <a href="{% url 'output' %}"><img src="{% static 'images/STAR.png' %}" style="position: absolute;left:1250px;bottom:700px; width:160px;height:80px;"/>
+
+
+
+
+</body>
+
+
+</html>

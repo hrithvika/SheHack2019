@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+
+body{
+    background-image: url("earth.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+</head>
+  <body style="background-image:url(/static/images/earth.gif);overflow:hidden">
+
+
+    <h2 style="color:white; text-align: center;position: relative; top: 200px;left: 20px;">You just took a great step towards contributing to the planet !</h2>
+    <a href="{% url 'my_out_view_name' %}"><img src="{% static 'images/home.png' %}" style="position: relative; top: 20px;left: 1400px; width:70px;height:70px;"/>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+<style>
+body{
+
+    background-size:100% 200% ;
+}
+
+#vehicles{
+     position:relative;
+     top:320px;
+     /*width:800px;
+     height:450px;*/
+     animation-name: vehicle;
+     animation-duration: 15s;
+     animation-iteration-count: infinite;
+ }
+
+@keyframes vehicle {
+  0%   {left:-1000px; bottom:0px;}
+  
+  100% {left:2000px; bottom:0px;}
+    
+}
+
+#buttons{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 100px;
+}
+
+#buttons a:link{
+    border-radius: 30px;
+
+    color:white;
+    background-color: black;
+    padding: 30px;
+    text-decoration: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.575) ;
+    
+}
+#buttons a:visited {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#buttons a:hover {
+  color:gray;
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#buttons a:active {
+  color: gray;
+  box-shadow: none;
+  background-color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body style="background-image:url(/static/images/railbg.jpg);overflow:hidden">
+
+        <div id="buttons">   <a href="{% url 'endride' %}">END TRIP</a> </div>
+
+        <!--a href="imagemap_house.html"><img src="home.png" style="position: relative; top: -200px;left: 1700px; width:80px;height:80px;"/></a-->
+
+    <div id="vehicles">
+        <img src="{% static 'images/train.gif' %}" style="width:648px;height:216px;"/>
+    </div>
+
+    
+
+</body>
+
+</html>

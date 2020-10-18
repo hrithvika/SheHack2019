@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content (image)*/
+.modal-content {
+    margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ 
+
+button{
+    background-color: transparent; 
+    border: none;
+
+}
+
+#imgbtns{
+  width:200px;
+  height:200px;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="background-image:url(/static/images/tech1.jpg);overflow:hidden">
+
+<h2 style="color:rgba(255, 0, 0, 0);">.</h2>
+
+<!-- Trigger/Open The Modal -->
+
+<button class="myBtn" style="position:relative;bottom:20px;left:320px;"><img src="{% static 'images/YOURANA.png' %}" id="imgbtns"></button>
+
+
+
+<!-- The Modal1 -->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="{% static 'images/A.jpg' %}" style="height:500px;width:700px"/>
+  </div>
+
+</div>
+
+
+<!--Button2-->
+<button class="myBtn"  style="position:relative;left:320px;top:200px"><img src="{% static 'images/EMISSIONS.png' %}" id="imgbtns"></button>
+
+
+
+<!--Modal2-->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="{% static 'images/B.jpg' %}" style="height:500px;width:700px"/>
+  </div>
+
+</div>
+
+
+<button class="myBtn"  style="position:relative;left:210px;top:490px"><img src="{% static 'images/ININDIA.png' %}" id="imgbtns"></button>
+<div id="myModal3" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="{% static 'images/C.png' %}" style="height:500px;width:700px"/>
+    </div>
+  
+  </div>
+
+<button class="myBtn"  style="position:relative;left:260px;top:670px"><img src="{% static 'images/WORLD.png' %}" id="imgbtns"></button>
+
+<div id="myModal4" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="{% static 'images/D.png' %}" style="height:700px;width:700px"/>
+    </div>
+  
+  </div>
+
+
+<button class="myBtn"  style="position:relative;left:440px;top:670px"><img src="{% static 'images/SURVEYCFS.png' %}" id="imgbtns"></button>
+
+<div id="myModal5" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="{% static 'images/E.png' %}" style="height:600px;width:700px"/>
+    </div>
+  
+  </div>
+
+
+
+<a href="{% url 'my_view_name' %}"><img src="{% static 'images/home1.png' %}" style="position: relative;bottom:200px;left:230px; width:60px;height:60px;"/>
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementsByClassName('modal');
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal 
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+btn[0].onclick = function() {
+  modal[0].style.display = "block";
+}
+
+btn[1].onclick = function() {
+  modal[1].style.display = "block";
+}
+
+btn[2].onclick = function() {
+  modal[2].style.display = "block";
+}
+
+btn[3].onclick = function() {
+  modal[3].style.display = "block";
+}
+
+btn[4].onclick = function() {
+  modal[4].style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span[0].onclick = function() {
+  modal[0].style.display = "none";
+}
+
+span[1].onclick = function() {
+  modal[1].style.display = "none";
+}
+
+span[2].onclick = function() {
+  modal[2].style.display = "none";
+}
+
+span[3].onclick = function() {
+  modal[3].style.display = "none";
+}
+
+span[4].onclick = function() {
+  modal[4].style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

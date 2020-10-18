@@ -1,0 +1,40 @@
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Sign Up For Earth-X</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+
+
+  </head>
+  <body class="container" style="background-image:url(/static/images/1.jpeg);overflow:hidden">
+    <form action="{% url 'forms' %}" method="post" name="sign up for beta form">
+      {% csrf_token %}
+      <div class="header">
+         <h1><strong>Sign Up For Earth-X</strong></h1   >
+      </div>
+      <div class="description">
+        <h4>Take your first steps towards contributing to this planet...</h4>
+      </div>
+      <div class="input">
+        <input type="text" class="button" id="email" name="email" placeholder="Enter your email" required><br>
+      </div>
+
+        <div class="input">
+        <input type="password" class="button"  id="email" name="password" placeholder="Enter password" required>
+    </div>
+
+        <div class="input"></div>
+       <button type="submit" class="btn" id="submit" >LETS GET TO KNOW YOU!</button>
+      </div>
+    </form>
+  </body>
+</html>
